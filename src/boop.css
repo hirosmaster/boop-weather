@@ -1,80 +1,34 @@
 body {
   background: #ffe0e0;
-  font-family: "Patrick Hand", sans-serif;
+  font-family: sans-serif;
+  max-height: 450px;
 }
 
 .weather-app {
   background: #fffafa;
   max-width: 600px;
-  max-height: 500px;
   box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
-  margin: 30px auto;
-  padding: 30px;
-  border-radius: 10px;
-}
-
-#current-city {
-  font-family: "Patrick Hand", sans-serif;
-  font-size: 45px;
-  font-weight: bolder;
-  color: #ffc0d0;
-  margin: 0;
-  padding: 0;
-}
-
-#current-temp {
-  position: fixed;
-  margin: 0;
-  padding: 0;
-  font-size: 55px;
-  left: 60%;
-  bottom: 65%;
-  font-weight: normal;
-  color: #ea9abb;
-  font-family: sans-serif;
-  font-weight: bolder;
-}
-
-.current-details {
-  margin: 0;
-  padding: 5px;
-  font-size: 20px;
-  font-family: sans-serif;
-  background: blue;
-  line-height: 2.5;
-}
-
-footer {
-  margin: 0;
-  padding: 0;
-  color: #fc7fb6;
-  font-size: 15px;
-}
-
-a {
-  color: #be8abf;
-}
-
-.search-form {
-  margin: 30px auto;
-  padding: 50px auto;
+  margin: 45px auto;
+  padding: 50px;
+  border-radius: 15px;
 }
 
 .search-input {
   font-family: sans-serif;
-  font-size: 18px;
-  margin: 30px auto;
-  padding: 10px auto;
+  font-size: 14px;
+  margin: 0 0 30px 0;
+  padding: 15px;
   border: 2px solid #fc85ae;
   border-radius: 10px;
+  width: 75%;
 }
 
 .button {
   font-family: sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bolder;
   margin: 0 0 0 5px;
-  padding: 10px auto;
+  padding: 15px 20px;
   background: #fc85ae;
   color: #fffafa;
   border: 2px solid #fc85ae;
@@ -86,4 +40,72 @@ a {
   background: #fffafa;
   border: 2px solid #fc85ae;
   cursor: pointer;
+}
+
+.current-city {
+  font-size: 63px;
+  margin: 0;
+  padding: 0;
+  color: #fc85ae;
+  font-family: "Patrick Hand", sans-serif;
+}
+
+.current-details {
+  color: #a2a8d3;
+  font-size: 15px;
+  line-height: 30px;
+}
+
+footer {
+  font-family: "Patrick Hand", sans-serif;
+  margin: 20px 0 0 0;
+  text-align: center;
+  color: #a2a8d3;
+}
+
+p {
+  font-family: sans-serif;
+}
+
+strong {
+  color: #fc85ae;
+}
+
+a {
+  color: #fc85ae;
+}
+
+.weather-app-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+main {
+  padding: 10px 0;
+}
+
+.current-temp-container {
+  display: flex;
+  font-family: sans-serif;
+  color: #fc85ae;
+  opacity: 50%;
+  margin-right: 28px;
+  margin-top: 10px;
+  margin-bottom: 100px;
+}
+
+.temp-value {
+  font-size: 75px;
+  font-weight: bolder;
+}
+
+.temp-icon {
+  font-size: 35px;
+  margin-top: 18px;
+  margin-right: 6px;
+}
+
+.temp-unit {
+  font-size: 25px;
+  margin-top: 15px;
 }

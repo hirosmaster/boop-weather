@@ -1,5 +1,3 @@
-alert("hello");
-
 function submitSearchForm(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-input");
@@ -8,5 +6,4 @@ function submitSearchForm(event) {
 }
 
 let searchFormElement = document.querySelector("#search-form");
-console.log(searchFormElement);
 searchFormElement.addEventListener("submit", submitSearchForm);

@@ -109,3 +109,29 @@ main {
   font-size: 25px;
   margin-top: 15px;
 }
+
+.current-temp-container.innerHTML {
+  display: flex;
+  font-family: sans-serif;
+  color: #fc85ae;
+  opacity: 50%;
+  margin-right: 28px;
+  margin-top: 10px;
+  margin-bottom: 100px;
+}
+
+.temp-value.innerHTML {
+  font-size: 75px;
+  font-weight: bolder;
+}
+
+.temp-icon.innerHTML {
+  font-size: 35px;
+  margin-top: 18px;
+  margin-right: 6px;
+}
+
+.temp-unit.innerHTML {
+  font-size: 25px;
+  margin-top: 15px;
+}

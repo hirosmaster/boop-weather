@@ -8,25 +8,24 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
     <title>Boop Weather</title>
+       
   </head>
   <body>
     <div class="weather-app">
     <header>
-      <form class="search-form">
+      <form class="search-form" id="search-form">
         <input type="search" placeholder="Enter a city" class="search-input" id="search-input" required />
         <input type="submit" value="Search" class="button" id="submit-button"/>
       </form>
     </header>
     <main>
-        <div class="current" id="current-city"> <h1>Paris</h1> </div>
-       <div id="current-details">
-        <p>
-        day 11:27, partly cloudy
+        <div id="current-city"> <h1>Paris</h1> </div>
+        <p class="current-details">
+        _day, 11:27, sunny
         <br />
-        Humidity: 54%, Wind: 5km/h
+        Humidity: <strong>54%</strong> Wind: <strong>5km/h </strong>
         </p> 
-    </div>
-      <div class="current" id="current-temp">⛅️ 32°C</div>
+      <div id="current-temp">⛅️ 32°C</div>
     </main>
     <footer>
       This project was coded by
@@ -42,4 +41,5 @@
     </footer>
     </div class="weather-app">
   </body>
+  <script src="src/boop.js"></script>
 </html>

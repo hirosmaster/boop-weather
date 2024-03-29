@@ -13,7 +13,7 @@ body {
   border-radius: 10px;
 }
 
-.current {
+#current-city {
   font-family: "Patrick Hand", sans-serif;
   font-size: 45px;
   font-weight: bolder;
@@ -22,10 +22,26 @@ body {
   padding: 0;
 }
 
-p {
+#current-temp {
+  position: fixed;
   margin: 0;
   padding: 0;
-  font-size: 25px;
+  font-size: 55px;
+  left: 60%;
+  bottom: 65%;
+  font-weight: normal;
+  color: #ea9abb;
+  font-family: sans-serif;
+  font-weight: bolder;
+}
+
+.current-details {
+  margin: 0;
+  padding: 5px;
+  font-size: 20px;
+  font-family: sans-serif;
+  background: blue;
+  line-height: 2.5;
 }
 
 footer {
@@ -47,7 +63,7 @@ a {
 .search-input {
   font-family: sans-serif;
   font-size: 18px;
-  margin: 10px auto;
+  margin: 30px auto;
   padding: 10px auto;
   border: 2px solid #fc85ae;
   border-radius: 10px;
@@ -70,19 +86,4 @@ a {
   background: #fffafa;
   border: 2px solid #fc85ae;
   cursor: pointer;
-}
-
-#current-temp {
-  position: relative;
-  margin: 0;
-  padding: 0;
-  font-size: 50px;
-  display: flex;
-  justify-content: right;
-  bottom: 210px;
-  right: 25px;
-  font-weight: normal;
-  color: #ea9abb;
-  font-family: sans-serif;
-  font-weight: bolder;
 }

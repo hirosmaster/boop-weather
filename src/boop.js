@@ -1,6 +1,8 @@
 function updateWeatherInfo(response) {
   let temp = document.querySelector("#current-temp");
   temp.innerHTML = Math.round(response.data.temperature.current);
+  let cityElement = document.querySelector("#current-city");
+  cityElement.innerHTML = response.data.city;
 }
 
 function searchCity(city) {
@@ -14,10 +16,10 @@ function searchCity(city) {
 function submitSearchForm(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-input");
-  let cityElement = document.querySelector("#current-city");
-  cityElement.innerHTML = searchInput.value;
   searchCity(searchInput.value);
 }
 
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", submitSearchForm);
+
+searchCity("Manila");

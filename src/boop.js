@@ -6,30 +6,16 @@ function updateWeatherInfo(response) {
   let weatherConditions = document.querySelector("#conditions");
   weatherConditions.innerHTML = response.data.condition.description;
 
-  if (
-    weatherConditions.innerHTML === "overcast clouds" ||
-    "few clouds" ||
-    "broken clouds"
-  ) {
-    let tempIcon = document.querySelector(".temp-icon");
-    tempIcon.innerHTML = `☁️`;
-  }
-  if (weatherConditions.innerHTML === "clear sky") {
-    let tempIcon = document.querySelector(".temp-icon");
-    tempIcon.innerHTML = `☀️`;
-  }
-
   let humidityValue = document.querySelector("#humidity");
   humidityValue.innerHTML = `${response.data.temperature.humidity}%`;
   let windValue = document.querySelector("#windspeed");
   windValue.innerHTML = `${response.data.wind.speed}m/sec`;
-
+  let iconElement = document.querySelector("#temp-icon");
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" />`;
   console.log(response.data);
 }
 
 function searchCity(city) {
-  //make API call and update UI
-  //Separation of concerns, functions should only do 1 thing and do it well
   let apiKey = "7284tb793b63a4fb3a7aacc794o38a02";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
   axios.get(apiUrl).then(updateWeatherInfo);
@@ -47,7 +33,7 @@ function fixDate(date) {
   let day = date.getDay();
 
   if (minutes < 10) {
-    minutes = `0${hours}`;
+    minutes = `0${minutes}`;
   }
   let days = [
     "Sunday",
@@ -70,4 +56,7 @@ let currentDateElement = document.querySelector("#current-date-time");
 let currentDateTime = new Date();
 currentDateElement.innerHTML = fixDate(currentDateTime);
 
-searchCity("Paris");
+searchCity("Manila");
+
+console.log(currentDateTime);
+console.log(currentDateTime.getMinutes());

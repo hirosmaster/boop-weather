@@ -1,12 +1,12 @@
 body {
-  background: #ffe0e0;
+  background: #f5d0d0;
   font-family: sans-serif;
   max-height: 450px;
 }
 
 .weather-app {
   background: #fffafa;
-  max-width: 500px;
+  max-width: 550px;
   box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
   margin: 45px auto;
   padding: 50px 50px 20px 50px;
@@ -59,9 +59,12 @@ body {
 }
 
 footer {
+  border-top: 1px solid#a2a8d3;
   font-family: "Patrick Hand", sans-serif;
   text-align: center;
+  font-size: 15px;
   color: #a2a8d3;
+  padding: 10px 0 0 0;
 }
 
 p {
@@ -89,21 +92,22 @@ main {
   display: flex;
   font-family: sans-serif;
   color: #fc85ae;
-  opacity: 50%;
+  opacity: 70%;
   margin-right: 28px;
-  margin-top: 10px;
   margin-bottom: 100px;
 }
 
 .temp-value {
-  font-size: 75px;
+  font-size: 81px;
   font-weight: bolder;
+  margin: 0 auto;
 }
 
 .temp-icon {
-  font-size: 35px;
-  margin-top: 18px;
-  margin-right: 6px;
+  width: 54px;
+  height: 54px;
+  margin-top: 3px;
+  margin-right: 35px;
 }
 
 .temp-unit {

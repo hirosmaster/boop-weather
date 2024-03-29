@@ -3,6 +3,28 @@ function updateWeatherInfo(response) {
   temp.innerHTML = Math.round(response.data.temperature.current);
   let cityElement = document.querySelector("#current-city");
   cityElement.innerHTML = response.data.city;
+  let weatherConditions = document.querySelector("#conditions");
+  weatherConditions.innerHTML = response.data.condition.description;
+
+  if (
+    weatherConditions.innerHTML === "overcast clouds" ||
+    "few clouds" ||
+    "broken clouds"
+  ) {
+    let tempIcon = document.querySelector(".temp-icon");
+    tempIcon.innerHTML = `☁️`;
+  }
+  if (weatherConditions.innerHTML === "clear sky") {
+    let tempIcon = document.querySelector(".temp-icon");
+    tempIcon.innerHTML = `☀️`;
+  }
+
+  let humidityValue = document.querySelector("#humidity");
+  humidityValue.innerHTML = `${response.data.temperature.humidity}%`;
+  let windValue = document.querySelector("#windspeed");
+  windValue.innerHTML = `${response.data.wind.speed}m/sec`;
+
+  console.log(response.data);
 }
 
 function searchCity(city) {
@@ -19,7 +41,33 @@ function submitSearchForm(event) {
   searchCity(searchInput.value);
 }
 
+function fixDate(date) {
+  let minutes = date.getMinutes();
+  let hours = date.getHours();
+  let day = date.getDay();
+
+  if (minutes < 10) {
+    minutes = `0${hours}`;
+  }
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  let fixedDay = days[day];
+  return `${fixedDay}, ${hours}:${minutes} ||`;
+}
+
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", submitSearchForm);
 
-searchCity("Manila");
+let currentDateElement = document.querySelector("#current-date-time");
+let currentDateTime = new Date();
+currentDateElement.innerHTML = fixDate(currentDateTime);
+
+searchCity("Paris");

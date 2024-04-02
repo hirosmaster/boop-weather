@@ -125,7 +125,7 @@ main {
   padding: 0 auto;
   display: inline-flex;
   border-top: 1px solid #fc85ae;
-  width: 300px;
+  width: 250px;
   height: 120px;
   justify-content: space-evenly;
 }

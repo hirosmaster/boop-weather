@@ -114,3 +114,16 @@ main {
   font-size: 25px;
   margin-top: 15px;
 }
+
+.weather-forecast-container {
+  font-family: sans-serif;
+  font-size: 15px;
+  color: #77529e;
+  opacity: 75%;
+  background: yellow;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0 5px 0 15px;
+  border: 1px solid black;
+  width: 100%;
+}
